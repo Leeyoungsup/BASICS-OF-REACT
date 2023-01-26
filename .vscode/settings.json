@@ -1,0 +1,4 @@
+{
+  "javascript.format.enable": false,
+  "cSpell.enableFiletypes": ["!latex", "objective-c", "xml"]
+}
