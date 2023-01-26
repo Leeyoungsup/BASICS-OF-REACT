@@ -5,24 +5,32 @@
   </body>
   <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-  <script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
     const root = document.querySelector('#root');
+    const Title = (
+      <h3 id="title" onMouseEnter={() => console.log('hello')}>
+        hello
+      </h3>
+    );
+    const btn = (
+      <button
+        id="button"
+        style={{ backgroundColor: 'tomato' }}
+        onClick={() => console.log('11')}
+      >
+        click me
+      </button>
+    );
+    /*
     const h3 = React.createElement(
       'h3',
       {
         onMouseEnter: () => console.log('123'),
       },
       'hello'
-    );
-    const btn = React.createElement(
-      'button',
-      {
-        onClick: () => console.log('11'),
-        style: { backgroundColor: 'tomato' },
-      },
-      'click me'
-    );
-    const container = React.createElement('div', null, [h3, btn]);
+    );*/
+    const container = React.createElement('div', null, [Title, btn]);
     ReactDOM.render(container, root);
   </script>
 </html>
