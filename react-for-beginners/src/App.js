@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 function App() {
   const [counter, setValue] = React.useState(0);
   const onClick = () => setValue((prev) => prev + 1);
-  console.log('render');
+  console.log('render11');
+  const iRunOnlyOnce = () => {
+    console.log('render');
+  };
+
+  useEffect(iRunOnlyOnce, []);
   return (
     <div>
       <h1>{counter}</h1>
